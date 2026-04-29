@@ -1,0 +1,224 @@
+/* ======================================================
+   LAYOUT — Header, Navigation, Footer
+====================================================== */
+
+/* ---- Header ---- */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 46px;
+  width: auto;
+}
+
+.logo-text .brand {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--secondary);
+  line-height: 1.1;
+}
+
+.logo-text .sub {
+  display: block;
+  font-size: 0.67rem;
+  color: var(--text-gray);
+  letter-spacing: 0.3px;
+}
+
+/* Hamburger (CSS-only) */
+#nav-toggle { display: none; }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background: var(--secondary);
+  border-radius: 3px;
+  transition: var(--transition);
+}
+
+/* Nav links */
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+nav ul li a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: var(--transition);
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.nav-cta {
+  background: var(--primary);
+  color: var(--white) !important;
+  padding: 8px 22px;
+  border-radius: 50px;
+  border-bottom: none !important;
+}
+
+.nav-cta:hover {
+  background: var(--primary-dark) !important;
+  color: var(--white) !important;
+}
+
+/* ---- Footer ---- */
+footer {
+  background: #111827;
+  color: rgba(255,255,255,0.75);
+  padding: 4rem 24px 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-brand .logo-text .brand { color: #fff; }
+.footer-brand .logo-text .sub   { color: rgba(255,255,255,0.4); }
+
+.footer-brand > p {
+  font-size: 0.86rem;
+  line-height: 1.7;
+  opacity: 0.6;
+  margin-top: 0.9rem;
+}
+
+.socials {
+  display: flex;
+  gap: 0.65rem;
+  margin-top: 1.2rem;
+}
+
+.social-btn {
+  width: 38px;
+  height: 38px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  color: rgba(255,255,255,0.55);
+}
+
+.social-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.social-btn:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.footer-col h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.footer-col ul a {
+  font-size: 0.84rem;
+  color: rgba(255,255,255,0.5);
+  transition: var(--transition);
+}
+
+.footer-col ul a:hover { color: var(--primary-light); }
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.6rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.3);
+}
+
+/* ---- Floating buttons ---- */
+.float-wrap {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  align-items: flex-end;
+}
+
+.float-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.22);
+  transition: var(--transition);
+}
+
+.float-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+.float-btn:hover { transform: translateY(-3px); }
+.float-wa  { background: #25D366; }
+.float-top { background: var(--primary); }
